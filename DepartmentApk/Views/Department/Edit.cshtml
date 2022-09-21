@@ -1,0 +1,22 @@
+﻿@model DepartmentApk.Models.department
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Edit Department</h2>
+
+<form action="/Department/Edit/@Model.Id" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="DepartmentName">Department Name</label>
+            <input type="hidden" name="DepartmentID" value="@Model.Id" />
+            <input type="text" class="form-control" id="DepartmentName" name="DepartmentName"
+                   placeholder="Department Name" value="@Model.Name">
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a class="btn btn-danger" href="/Department/Index">Cancel</a>
+    </div>
+</form>
+
+

@@ -1,0 +1,22 @@
+﻿@model DepartmentApk.Models.department
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Department ID</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Department Name</th>
+        <td>@Model.Name</td>
+    </tr>
+</table>
+<a class="btn btn-dark" href="/Department/Index">Back to Products</a>
+
+
+

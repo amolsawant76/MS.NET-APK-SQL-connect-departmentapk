@@ -1,0 +1,27 @@
+﻿@model DepartmentApk.Models.department
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete Department</h2>
+
+<form action="/Department/Delete/@Model.Name" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label for="DepartmentName">Department Name</label>
+            </td>
+            <td>
+                <input type="hidden" name="DepartmentID"
+                       value="@Model.Id" />
+                @Model.Name
+            </td>
+        </tr>
+    </table>
+    <div>Are you sure to delete this product?</div>
+    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+    <a class="btn btn-danger" href="/Department/Index">Cancel</a>
+</form>
+
+

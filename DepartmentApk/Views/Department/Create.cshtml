@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Add Department</h2>
+<form action="/Department/Create" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="DepartmentID">Department ID</label>
+            <input type="number" class="form-control" id="Id"
+                   name="Id" placeholder="Department id">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="DepartmentName">Department Name</label>
+            <input type="text" class="form-control" id="Name"
+                   name="Name" placeholder="Department Name">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success btn-sm">Create</button>
+    <a class="btn btn-danger btn-sm" href="/Department/Index">Cancel</a>
+</form>
